@@ -3,21 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86ba9ec0-e34c-4d23-b7c3-44dd97a531aa" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/Arrays/ArrangeNegativePositive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InputOutput/InputOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Maths/Combinatorics/SortedPermutationsRankWithDuplicates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/Factorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/FastPowerExponentiation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/Fibonacci.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/IsMagic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/PrintReverseString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/Sequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/SumOfDigits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlgosInJava.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="Application.InputOutput">
+  <component name="RunManager" selected="Application.ArrangeNegativePositive">
     <configuration name="ArrangeNegativePositive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Arrays.ArrangeNegativePositive" />
       <module name="PracticeTest" />
@@ -85,8 +71,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InputOutput" />
         <item itemvalue="Application.ArrangeNegativePositive" />
+        <item itemvalue="Application.InputOutput" />
       </list>
     </recent_temporary>
   </component>
@@ -99,8 +85,16 @@
       <option name="presentableId" value="Default" />
       <updated>1644029729229</updated>
       <workItem from="1644029731145" duration="49000" />
-      <workItem from="1644029901788" duration="8622000" />
+      <workItem from="1644029901788" duration="10348000" />
     </task>
+    <task id="LOCAL-00001" summary="solving problems related to recursion">
+      <created>1644076973815</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644076973815</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,5 +110,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="solving problems related to recursion" />
+    <option name="LAST_COMMIT_MESSAGE" value="solving problems related to recursion" />
   </component>
 </project>
