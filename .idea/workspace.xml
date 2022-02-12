@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86ba9ec0-e34c-4d23-b7c3-44dd97a531aa" name="Default Changelist" comment="Arrange negative, positive numbers in O(N)">
-      <change afterPath="$PROJECT_DIR$/src/Recursion/GrayCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/KthSymbol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recursion/TowersOfHanoi.java" afterDir="false" />
+    <list default="true" id="86ba9ec0-e34c-4d23-b7c3-44dd97a531aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/ArrangeNegativePositive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/ArrangeNegativePositive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recursion/FastPowerExponentiation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recursion/FastPowerExponentiation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recursion/KthSymbol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recursion/KthSymbol.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,19 +72,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TowersOfHanoi" />
@@ -105,7 +90,8 @@
       <updated>1644029729229</updated>
       <workItem from="1644029731145" duration="49000" />
       <workItem from="1644029901788" duration="11079000" />
-      <workItem from="1644420609408" duration="3127000" />
+      <workItem from="1644420609408" duration="3356000" />
+      <workItem from="1644676772058" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="solving problems related to recursion">
       <created>1644076973815</created>
@@ -121,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644084714098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="More Recursion problems">
+      <created>1644462639327</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644462639327</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +135,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="solving problems related to recursion" />
     <MESSAGE value="Arrange negative, positive numbers in O(N)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrange negative, positive numbers in O(N)" />
+    <MESSAGE value="More Recursion problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="More Recursion problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

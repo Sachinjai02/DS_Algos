@@ -15,7 +15,8 @@ Output : 2
 */
 public class FastPowerExponentiation {
     public int pow(int A, int B, int C) {
-        if(B == 0) return getMod(A,C);
+        if(A==0) return 0;
+        if(B == 0) return 1;
 
         int halfPow = pow(A, B/2, C);
         int fullPow = getMod((long) halfPow * halfPow, C);

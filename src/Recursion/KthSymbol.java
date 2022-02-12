@@ -32,6 +32,8 @@ public class KthSymbol {
 
     //Non-recursive code
     //find number of set bits in the number B; if odd then
+    //Set Bit means current number is odd and this would mean in recursive code it would have
+    //inverted
     public int solve2(int A, int B) {
         int countSetBits = 0;
         B--; // decreasing it to get 0 based indexing
