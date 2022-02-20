@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ba9ec0-e34c-4d23-b7c3-44dd97a531aa" name="Default Changelist" comment="Soving more problems around Binary Search">
-      <change afterPath="$PROJECT_DIR$/src/BinarySearch/RotatedSortedArraySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinarySearch/SquareRootInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinarySearch/AMagicalNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinarySearch/SearchInBitonicArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinarySearch/SpecialInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BitManipulations/DivideIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BitManipulations/DivideIntegers.java" afterDir="false" />
     </list>
@@ -135,7 +136,7 @@
       <workItem from="1644676772058" duration="2021000" />
       <workItem from="1645031534981" duration="371000" />
       <workItem from="1645111262687" duration="4262000" />
-      <workItem from="1645206806629" duration="249000" />
+      <workItem from="1645206806629" duration="2829000" />
     </task>
     <task id="LOCAL-00001" summary="solving problems related to recursion">
       <created>1644076973815</created>
@@ -179,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645200449701</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Soving more problems around Binary Search">
+      <created>1645207076193</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1645207076193</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
