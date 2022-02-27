@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ba9ec0-e34c-4d23-b7c3-44dd97a531aa" name="Default Changelist" comment="Soving more problems around Binary Search">
-      <change afterPath="$PROJECT_DIR$/src/BinarySearch/KthSmallestElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinarySearch/MatrixMedian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hashing/CanFormPalindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hashing/ColorfulNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hashing/CustomSorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BitManipulations/DivideIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BitManipulations/DivideIntegers.java" afterDir="false" />
     </list>
@@ -136,7 +137,7 @@
       <workItem from="1645206806629" duration="2964000" />
       <workItem from="1645418103506" duration="16000" />
       <workItem from="1645630666847" duration="4350000" />
-      <workItem from="1645936835413" duration="5709000" />
+      <workItem from="1645936835413" duration="10062000" />
     </task>
     <task id="LOCAL-00001" summary="solving problems related to recursion">
       <created>1644076973815</created>
@@ -201,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645949521650</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Soving more problems around Binary Search">
+      <created>1645949711741</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1645949711741</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,9 +233,9 @@
     <MESSAGE value="More Recursion problems" />
     <MESSAGE value="Fixing fast power exponentiation" />
     <MESSAGE value="Soving problems around Binary Search" />
-    <MESSAGE value="Soving more problems around Binary Search" />
     <MESSAGE value="Problems around Hashing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problems around Hashing" />
+    <MESSAGE value="Soving more problems around Binary Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Soving more problems around Binary Search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
