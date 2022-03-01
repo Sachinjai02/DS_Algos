@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86ba9ec0-e34c-4d23-b7c3-44dd97a531aa" name="Default Changelist" comment="Soving more problems around Binary Search">
-      <change afterPath="$PROJECT_DIR$/src/BinarySearch/AggressiveCows.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/BinarySearch/AllocateBooks.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/BinarySearch/FoodPacketsDistribution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinarySearch/PaintersPartitionProblem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BitManipulations/DivideIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BitManipulations/DivideIntegers.java" afterDir="false" />
     </list>
@@ -138,7 +136,7 @@
       <workItem from="1645206806629" duration="2964000" />
       <workItem from="1645418103506" duration="16000" />
       <workItem from="1645630666847" duration="4350000" />
-      <workItem from="1645936835413" duration="12539000" />
+      <workItem from="1645936835413" duration="15566000" />
     </task>
     <task id="LOCAL-00001" summary="solving problems related to recursion">
       <created>1644076973815</created>
@@ -217,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645966715889</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Solving more problems around Binary Search">
+      <created>1645984004912</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1645984004912</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +250,8 @@
     <MESSAGE value="Soving more problems around Binary Search" />
     <MESSAGE value="Soving more problems around Hashing" />
     <MESSAGE value="Solving more problems around Hashing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solving more problems around Hashing" />
+    <MESSAGE value="Solving more problems around Binary Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solving more problems around Binary Search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
