@@ -92,4 +92,42 @@ public class FoodPacketsDistribution {
         return false;
 
     }
+
+
+    public int solve_optimal(int[] A, int B) {
+
+        int l=1, h=A[0], max = 0; long sum =0;
+        for(int i=0;i<A.length;i++) {
+            h = Math.min(h, A[i]);
+            max = Math.max(max, A[i]);
+            sum+=A[i];
+        }
+
+        if(sum < B) return 0;
+
+        if(A.length >= B) {
+            return max;
+        }
+
+        int maxPeople = 0;
+        while(l<=h) {
+            int m = (l+h)/2;
+            if(foodCanBeDistributedIn_optim(A, B, m)) {
+                maxPeople = m;
+                l = m+1;
+            } else {
+                h = m-1;
+            }
+        }
+        return  maxPeople;
+    }
+
+    private boolean foodCanBeDistributedIn_optim(int[] pop, int totalOffices, int minPeople) {
+        long numOffices = 0;
+        for(int i=0;i<pop.length;i++) {
+            numOffices += pop[i]/minPeople;
+        }
+        if(numOffices >= totalOffices) return true;
+        return false;
+    }
 }
