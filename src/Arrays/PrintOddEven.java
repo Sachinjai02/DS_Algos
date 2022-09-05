@@ -21,7 +21,7 @@ public class PrintOddEven {
                 evenSema.release();
                 return;
             }
-            System.out.println(counter++);
+            System.out.println(counter++ + " by " + Thread.currentThread().getName());
             evenSema.release();
         }
     }
@@ -37,14 +37,14 @@ public class PrintOddEven {
                 oddSema.release();
                 return;
             }
-            System.out.println(counter++);
+            System.out.println(counter++ + " by " + Thread.currentThread().getName());
             oddSema.release();
         }
     }
 
     public static void main(String[] args) {
         PrintOddEven printer = new PrintOddEven();
-        printer.MaxNumber = 0;
+        printer.MaxNumber = 10;
         Thread t1 = new Thread(()-> {
             printer.printOdd();
         });
