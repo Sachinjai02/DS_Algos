@@ -5,88 +5,107 @@ import java.util.Map;
 
 public class SortedPermutationsRankWithDuplicates {
     public static void main(String[] args) {
-        new SortedPermutationsRankWithDuplicates().findRank("baa");
+        String s  = "settle";
+        int rank = new SortedPermutationsRankWithDuplicates().findRank(s);
+        System.out.println("rank of " + s + " is " + rank);
     }
+    /* Rank is to be calculated based on
+    1+ V(i=0 to length-1) Sum(  no. of chars lower than ith char on its right side *
+                                fact(number of slots left on i's right) /
+                                fact(rep1)* fact(rep2) ... for all chars to right of i including  ith char);
+   */
+    class Pair {
+        int rank;
+        int count;
+
+    }
+
     public int findRank(String A) {
-        int rank = 1;
-        int p = 1000003;
-        Map<Character, Integer> charFreq = new HashMap<>();
-        for(int i=0;i<A.length();i++) {
+        int mod = 1000003;
+        Map<Character, Pair> pairRanks = new HashMap();
+        //create a map of ranks
+        for(int i=0;i<A.length();++i) {
             char ch = A.charAt(i);
-            Integer count = charFreq.get(ch);
-            if(count == null) count = 0;
-            charFreq.put(ch, count+1);
+            Pair p = pairRanks.get(ch);
+            if(p==null) {
+                p = new Pair();
+                pairRanks.put(ch, p);
+            }
+            ++(p.count);
+        }
+        //find ranks
+        for(Map.Entry<Character, Pair> entry : pairRanks.entrySet()) {
+            int rank = 0;
+            Pair currentPair = entry.getValue();
+            for(Map.Entry<Character, Pair> entry2 : pairRanks.entrySet()) {
+                if(entry2.getKey() < entry.getKey()) {
+                    ++rank;
+                }
+            }
+            currentPair.rank=rank;
         }
 
-        for(int i=0;i<A.length();i++) {
-            char ch = A.charAt(i);
-            int positionInSortedArrangement = getPosition(ch, charFreq);
-            removeElement(charFreq, ch);
-            int permutationsBeforePositionSorted = getSpecialPermutations(ch, charFreq, p);
-            rank = (int) ((rank + ((long) positionInSortedArrangement * permutationsBeforePositionSorted)%p)%p);
+        int[] facts = new int[A.length()+1];
+        facts[0] = 1; facts[1] = 1;
+
+        //calculate factorial mod array of  A.length()
+        for(int i=2;i<=A.length();++i) {
+            facts[i] = (int) (((long) i*facts[i-1])%mod);
         }
+        int finalRank = 1;
 
-        return rank;
-
-    }
-
-    private int getSpecialPermutations(char ch, Map<Character, Integer> charFreq, int mod) {
-        int requiredPerm = (int) (((long) factorialMod(charFreq.size(), mod) *
-                inverseMod(getRepetiveProduct(charFreq, mod), mod)) % mod);
-        return requiredPerm;
-    }
-
-    private int factorialMod(int n, int mod) {
-        int fact = 1;
-        for(int i=2; i<=n;i++) {
-            fact = (int) (((long) fact * i)% mod);
+        //Loop through A
+        for(int i=0;i<A.length();++i) {
+            char element = A.charAt(i);
+            int numCharsBeforeElement = getTotalCharsBefore(pairRanks, element);
+            if( numCharsBeforeElement > 0) {
+                int currentArrangements = (int) (((long) numCharsBeforeElement * facts[A.length()-1-i])%mod);
+                for(Map.Entry<Character, Pair> entry : pairRanks.entrySet()) {
+                    Pair currentPair = entry.getValue();
+                    if(currentPair.count > 1) {
+                        currentArrangements = (int) (((long)currentArrangements * pow(facts[currentPair.count], mod-2, mod))%mod);
+                    }
+                }
+                finalRank = (finalRank + currentArrangements)%mod;
+            }
+            removeElement(pairRanks, element);
         }
-        return fact;
+        return finalRank;
     }
 
-    private int getRepetiveProduct(Map<Character, Integer> charFreq, int mod) {
-        int prod = 1;
-        for(Map.Entry<Character, Integer> entry : charFreq.entrySet()) {
-            if(entry.getValue() > 1) {
-                prod = (int) (((long)prod * entry.getValue())%mod);
+    private int getTotalCharsBefore(Map<Character, Pair> pairRanks, char element) {
+        int totalChars = 0;
+        int rankElement = pairRanks.get(element).rank;
+        for(Map.Entry<Character, Pair> entry : pairRanks.entrySet()) {
+            Pair currentPair = entry.getValue();
+            if(entry.getKey() != element && currentPair.rank < rankElement) {
+                totalChars += currentPair.count;
             }
         }
-        return prod;
+        return totalChars;
     }
 
-    private int inverseMod(int num, int mod) {
-        return fastPow(num, mod-2, mod);
-    }
-
-    public int fastPow(int A, int B, int C) {
-        if(A==0) return 0;
-        if(B==0) return 1;
-        int halfpower = fastPow(A, B/2, C);
-        int power = (int) ((halfpower * 1l * halfpower)%C);
-        //odd
-        if( (B & 1) != 0) {
-            int aModC = A < 0 ? A%C + C : A%C ;
-            power = (int) ((power * 1l * aModC)%C);
+    private void removeElement(Map<Character, Pair> pairRanks, char element) {
+        int count = pairRanks.get(element).count;
+        if(count > 1) {
+            --(pairRanks.get(element).count);
+            return;
         }
-        return power;
-    }
+        int rankElement = pairRanks.get(element).rank;
 
-    private void removeElement(Map<Character, Integer> charFreq, char ch) {
-        Integer freq = charFreq.get(ch);
-        if(freq <= 1) {
-            charFreq.remove(ch);
-        } else {
-            charFreq.put(ch, freq-1);
-        }
-    }
-
-    private int getPosition(char ch, Map<Character, Integer> charFreq) {
-        int position = 0;
-        for(Map.Entry<Character, Integer> entry : charFreq.entrySet()) {
-            if(entry.getKey() < ch) {
-                position = position + entry.getValue();
+        for(Map.Entry<Character, Pair> entry : pairRanks.entrySet()) {
+            Pair currentPair = entry.getValue();
+            if(currentPair.rank > rankElement) {
+                --(currentPair.rank);
             }
         }
-        return Math.max(position, 0);
+        pairRanks.remove(element);
+    }
+
+    int pow(int n, int p, int m) {
+        if(p==0) return 1;
+        int half = pow(n,p/2,m);
+        int full = (int)((half * 1l * half ) % m);
+        return ( (p&1)==0) ? full : (int) ((full * 1l * n)%m);
     }
 }
