@@ -7,7 +7,7 @@ public class Sorting {
 
     public void sort(int[] A) {
         /* Try implementing quick, merge, radix, insertion, selection, bubble */
-        // quickSort(A);
+         quickSort(A);
         // mergeSort(A);
         // insertionSort(A);
         // selectionSort(A);
